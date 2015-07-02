@@ -14,7 +14,7 @@ defmodule Builtinplug.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger],
+    [applications: [:logger, :cowboy, :plug],
      mod: {Builtinplug, []}]
   end
 

@@ -9,6 +9,7 @@ defmodule Builtinplug do
     children = [
       # Define workers and child supervisors to be supervised
       # worker(Builtinplug.Worker, [arg1, arg2, arg3])
+      Plug.Adapters.Cowboy.child_spec(:http, Builtinplug.Worker, [], [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
