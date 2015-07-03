@@ -15,6 +15,7 @@ defmodule Builtinplug.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [applications: [:logger, :cowboy, :plug],
+     included_applications: [:logger_file_backend],
      mod: {Builtinplug, []}]
   end
 
@@ -30,6 +31,7 @@ defmodule Builtinplug.Mixfile do
   defp deps do
     [{:cowboy, "~> 1.0.0"},
      {:plug, "~> 0.13"},
-     {:logger_file_backend, "~> 0.0.3"}]
+     {:logger_file_backend, "~> 0.0.3"},
+     {:exrm, "~> 0.18.0"}]
   end
 end
