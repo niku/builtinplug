@@ -29,6 +29,7 @@ defmodule Builtinplug.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [{:cowboy, "~> 1.0.0"},
-     {:plug, "~> 0.13"}]
+     {:plug, "~> 0.13"},
+     {:logger_file_backend, "~> 0.0.3"}]
   end
 end
